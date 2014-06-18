@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+\title{Numerically Solving Newton's Second Law}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Pre-notebook}
+Work through these questions with your group before you move onto the IPython notebook.
+
+\subsection{Solving Newton's Second Law for a mass on a spring}\label{Newtons}
+Write down Newton's Second Law for a mass $m$, on a spring with spring constant $k$.
+Initially assume that there is no friction in the system.
+\begin{itemize}
+\item Can you rewrite this in terms of derivatives of the position variable?
+\item Solve this differential equation and find an expression for the position of the mass as a function of time.
+\end{itemize}
+
+\subsection{Conservation of Energy}
+Given the solution you found in section~\ref{Newtons}, find the velocity of the mass as a function of time.
+With the position and velocity expressions, check to make sure that the system conserves energy.
+
+Okay, now go and start working through the notebook.
+
+\section{Numerical Updates for Position and Velocity}
+We want to model our system discretely so it can be solved on a computer.
+\subsection{Written Updates}
+Given the ``delta t'' versions of the acceleration and velocity equations, what are the updates for $v_{t+\Delta t}$ and $x_{t+\Delta t}$.
+\subsection{Coded Updates}
+We've filled in the update for $x$ and $t$ for you. Write the code to update $a$
+
+\section{Problems with the Model}
+If you made your $\Delta t$ larger, you might have noticed that the oscillations started to blow up in our numerical version.
+\subsection{Conservation of Energy}
+Can you show if energy is conserved given the updates for $x$ and $v$ that you derived earlier?
+\subsection{Adding Drag}
+What if we want to add drag to the model? Write down the updates for $x$ and $v$ again with a drag term included.
+
+
+
+\end{document}
